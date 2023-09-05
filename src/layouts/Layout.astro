@@ -1,39 +1,117 @@
---- 
+---
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="robots"
+            content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="theme-color" content="#fff" />
+
+        <!-- Social Media Information -->
+        <meta
+            property="og:title"
+            content="How to set GitHub credentials for macOS"
+        />
+        <meta
+            property="og:description"
+            content="Set up GitHub authentication so you can use it from VS Code or the command line"
+        />
+        <meta
+            property="og:url"
+            content="https://flaviocopes.com/setup-github-credentials-macos/"
+        />
+        <meta
+            property="og:image"
+            content="https://flaviocopes.com/img/avatar.png"
+        />
+        <!-- Social Media Information -->
+
+        <meta name="author" content="Daniel Castillo Giraldo" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+
+        <title>{title}</title>
+        <meta name="description" content="Astro description" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+    * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+    :root {
+        --gradient-blue: #007cf0;
+        --gradient-ocean: #00dfd8;
+        --horizontal-gradient: linear-gradient(
+            90deg,
+            var(--gradient-blue),
+            var(--gradient-ocean)
+        );
+        --vertical-gradient: linear-gradient(
+            0deg,
+            var(--gradient-blue),
+            var(--gradient-ocean)
+        );
+    }
+    html {
+        font-family: "Inter", sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    div.container {
+        width: 100%;
+    }
+    div.large-content {
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+    div.content {
+        max-width: 730px;
+        margin: 0 auto;
+    }
+    h1, h2, h3 {
+        text-align: center;
+        background-image: linear-gradient(to bottom right,#000 30%,#78716c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h1.main_title {
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 110%;
+    }
 </style>

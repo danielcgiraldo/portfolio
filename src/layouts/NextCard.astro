@@ -1,0 +1,44 @@
+---
+/*
+    Card inspired
+
+*/
+---
+
+<a
+    href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+    class="next_card"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <h2 class={`mb-3 text-2xl font-semibold`}>
+        Learn{" "}
+        <span
+            class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none"
+        >
+            -&gt;
+        </span>
+    </h2>
+    <p class={`m-0 max-w-[30ch] text-sm opacity-50`}>
+        Learn about Next.js in an interactive course with&nbsp;quizzes!
+    </p>
+</a>
+
+<style>
+    a.next_card {
+        padding: 1rem 1.25rem;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+        transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+    }
+
+    a.next_card:hover {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 1px solid rgba(231, 231, 231, 0.469);
+    }
+</style>
